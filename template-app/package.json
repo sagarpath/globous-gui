@@ -1,0 +1,17 @@
+{
+  "name": "proton-template-app",
+  "version": "1.0.0",
+  "description": "A simple template app for Proton",
+  "main": "app.js",
+  "author": "Connor Sears",
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "dependencies": {
+    "zerorpc": "fyears/zerorpc-node"
+  },
+  "devDependencies": {
+    "electron": "^1.6.11",
+    "electron-reload": "^1.2.1"
+  }
+}

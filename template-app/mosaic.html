@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Apokalypto 1.0</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/photon.min.css">
+
+    <!-- Javascript -->
+    <!-- <script src="js/menu.js" charset="utf-8"></script> -->
+    <script src="mosaic.js" type="text/javascript" charset="utf-8" async defer></script>
+    <script src="page.js" ></script>
+  </head>
+  <body>
+    <div class="window">
+
+      <!-- .toolbar-header sits at the top of your app -->
+      <header class="toolbar toolbar-header">
+        <h1 class="title">MOSAIC</h1>
+      </header>
+
+      <!-- Your app's content goes inside .window-content -->
+      <div class="window-content">
+        <div class="pane-group">
+          <div class="pane pane-sm sidebar">
+            <nav class="nav-group">
+              <!-- <h5 class="nav-group-title">Favorites</h5> -->
+              <span class="nav-group-item "   onclick="page('index.html')">
+                <span class="icon icon-info-circled"></span>
+                About
+              </span>
+              <span class="nav-group-item active"  onclick="page('mosaic.html')">
+                <span class="icon icon-camera"></span>
+                Mosaicing
+              </span>
+              <span class="nav-group-item ">
+                <span class="icon icon-eye"></span>
+                Dehazing
+              </span>
+              <span class="nav-group-item ">
+                <span class="icon icon-light-up"></span>
+                Enhancement
+              </span>
+              
+              <span class="nav-group-item ">
+                <span class="icon icon-brush"></span>
+                Segmentation
+              </span>
+            </nav>
+          </div>
+          <div class="pane">
+          <div align="center">
+            <h3>Mosaicing</h3><br><br>
+            <input type="file" name="file"><br><br>
+            <button class="btn btn-primary" onclick="execute()">Start Mosaic</button>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
