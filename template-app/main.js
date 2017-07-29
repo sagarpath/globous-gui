@@ -48,9 +48,9 @@ ipcMain.on('load-page', (event, arg) => {
 
 
 
-const PY_DIST_FOLDER = 'clahe'
+const PY_DIST_FOLDER = 'gamma'
 // const PY_FOLDER = 'pycalc'
-const PY_MODULE = 'clahe' 
+const PY_MODULE = 'gamma'
 
 
 // const guessPackaged = () => {

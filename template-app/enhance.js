@@ -19,7 +19,7 @@ function category(division){
 
 function execute() {
 	// body...
-	var clip=$("#clipv").val()
+	var clip=$("#gammav").val()
 	var file=document.getElementById("clvid").files[0].path
 	
 	console.log(file)
