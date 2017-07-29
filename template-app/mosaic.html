@@ -4,59 +4,91 @@
     <title>Apokalypto 1.0</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="../css/photon.min.css">
+    <!-- <link rel="stylesheet" href="./css/photon.min.css"> -->
 
     <!-- Javascript -->
     <!-- <script src="js/menu.js" charset="utf-8"></script> -->
     <script src="mosaic.js" type="text/javascript" charset="utf-8" async defer></script>
     <script src="page.js" ></script>
+    <link rel="import" href="node_modules/xel/xel.min.html">
+    <link rel="stylesheet" href="node_modules/xel/stylesheets/material.theme.css">
+    <!-- <link rel="stylesheet" href="node_modules/xel/stylesheets/macos.theme.css"> -->
+    
+    <link rel="stylesheet" type="text/css" href="fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styling.css">
+    <link rel="stylesheet" type="text/css" href="./css/mosaic.css">
   </head>
   <body>
-    <div class="window">
+    <div class="window" align="center">
 
-      <!-- .toolbar-header sits at the top of your app -->
-      <header class="toolbar toolbar-header">
-        <h1 class="title">MOSAIC</h1>
-      </header>
+      <div class="header" align="center">
+       <img src="logo/1primarylogo.png" alt="">
+     </div>
+      <div class="options">
+        <div class="top">
+          <p>Mosaicing</p>
+          <x-button toggled class="about" onclick="page('index.html')">
+            <x-box>
+              <span><i class="fa fa-home" aria-hidden="true"></i></span>
+              <x-label>Home</x-label>
+            </x-box>
+          </x-button>
+        </div>
+        <div class="operations">
+            <x-radios class="type">
+              <x-box onclick="category('pipe')">
+                <x-radio id="first-radio" toggled></x-radio>
+                <x-label for="first-radio" id="label-1">Pipe</x-label>
+              </x-box>
+              <x-box  onclick="category('video')">
+                <x-radio id="second-radio" ></x-radio>
+                <x-label for="second-radio" id="label-2">Video</x-label>
+              </x-box>
+              <x-box onclick="category('image')">
+                <x-radio id="third-radio"></x-radio>
+                <x-label for="third-radio" id="label-3">Image</x-label>
+              </x-box>
+              <x-box onclick="category('stackimages')">
+                <x-radio id="fourth-radio"></x-radio>
+                <x-label for="fourth-radio" id="label-4">Stack of Image</x-label>
+              </x-box>
+            </x-radios>
+            <div class="func">
+              <div id="pipe">
+              <label>Input Image File : <input type="file" accept="video/*" name="file"></label><br>
+            </div>
+            <div id="video" style="display: none;">
+              <label>Input Video File : <input type="file" accept="video/*" name="file"></label><br>
+            </div>
+            <div id="image" style="display: none;">
+              <label>Input First Image : <input type="file" accept="image/*" name="file"></label><br>
+              <label>Input Second Image : <input type="file" accept="image/*" name="file"></label><br>
+            </div>
+            <div id="stackimages" style="display: none;">
+              <label>Input Image folder : <input type="file" webkitdirectory directory ></label><br>
+            </div>
 
-      <!-- Your app's content goes inside .window-content -->
-      <div class="window-content">
-        <div class="pane-group">
-          <div class="pane pane-sm sidebar">
-            <nav class="nav-group">
-              <!-- <h5 class="nav-group-title">Favorites</h5> -->
-              <span class="nav-group-item "   onclick="page('index.html')">
-                <span class="icon icon-info-circled"></span>
-                About
-              </span>
-              <span class="nav-group-item active"  onclick="page('mosaic.html')">
-                <span class="icon icon-camera"></span>
-                Mosaicing
-              </span>
-              <span class="nav-group-item ">
-                <span class="icon icon-eye"></span>
-                Dehazing
-              </span>
-              <span class="nav-group-item ">
-                <span class="icon icon-light-up"></span>
-                Enhancement
-              </span>
-              
-              <span class="nav-group-item ">
-                <span class="icon icon-brush"></span>
-                Segmentation
-              </span>
-            </nav>
-          </div>
-          <div class="pane">
-          <div align="center">
-            <h3>Mosaicing</h3><br><br>
-            <input type="file" name="file"><br><br>
-            <button class="btn btn-primary" onclick="execute()">Start Mosaic</button>
-          </div>
-          </div>
+            <!-- <label>Output Destination : <input type="file" id="ctrl" webkitdirectory directory /></label><br><br> -->
+            
+            <x-progressbar value="0.5"></x-progressbar>
+            
+            <x-button class="button" toggled onclick="execute()">
+              <x-box>
+                <!-- <span><x-throbber></x-throbber></span> -->
+                <x-label>Start Mosaicing</x-label>
+              </x-box>
+                
+            </x-button>
+            </div>
         </div>
       </div>
+      
     </div>
+
   </body>
+  <script>
+  let bar = document.querySelector("x-progressbar");
+  // let callback = () => bar.value >= 1 ? bar.value = 0 : bar.value += 0.15;
+  // setInterval(callback, 1000);
+</script>
 </html>

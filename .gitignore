@@ -150,4 +150,8 @@ package-lock.json
 *.vob
 *.wmv
 
+
+###folders
+clahe/
+
 # End of https://www.gitignore.io/api/node,video,images

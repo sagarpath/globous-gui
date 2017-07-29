@@ -4,58 +4,57 @@
     <title>Apokalypto 1.0</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="../css/photon.min.css">
+    <!-- <link rel="stylesheet" href="./css/photon.min.css"> -->
 
     <!-- Javascript -->
     <!-- <script src="js/menu.js" charset="utf-8"></script> -->
     <script src="index.js" type="text/javascript" charset="utf-8" async defer></script>
     <script src="page.js" ></script>
+    <link rel="import" href="node_modules/xel/xel.min.html">
+    <link rel="stylesheet" href="node_modules/xel/stylesheets/material.theme.css">
+    <!-- <link rel="stylesheet" href="node_modules/xel/stylesheets/macos.theme.css"> -->
+    <link rel="stylesheet" type="text/css" href="fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/styling.css">
+
   </head>
   <body>
-    <div class="window">
+    <div class="window" align="center">
 
-      <!-- .toolbar-header sits at the top of your app -->
-      <header class="toolbar toolbar-header">
-        <h1 class="title">HOME</h1>
-      </header>
-
-      <!-- Your app's content goes inside .window-content -->
-      <div class="window-content">
-        <div class="pane-group">
-          <div class="pane pane-sm sidebar">
-            <nav class="nav-group">
-              <!-- <h5 class="nav-group-title"></h5> -->
-              <span class="nav-group-item active"   onclick="page('index.html')">
-                <span class="icon icon-info-circled"></span>
-                About
-              </span>
-              <span class="nav-group-item "  onclick="page('mosaic.html')">
-                <span class="icon icon-camera"></span>
-                Mosaicing
-              </span>
-              <span class="nav-group-item ">
-                <span class="icon icon-eye"></span>
-                Dehazing
-              </span>
-              <span class="nav-group-item ">
-                <span class="icon icon-light-up"></span>
-                Enhancement
-              </span>
-              
-              <span class="nav-group-item ">
-                <span class="icon icon-brush"></span>
-                Segmentation
-              </span>
-            </nav>
-          </div>
-          <div class="pane">
-          <div align="center">
-            <h2 style="padding-top: 100px;">Apokalypto 1.0</h2>
-            <h3>by Solinas Technologies Pvt. Ltd.</h3>
-          </div>
-          </div>
-        </div>
-      </div>
+     <div class="header" align="center">
+       <img src="logo/1primarylogo.png" alt="">
+     </div>
+     <div class="options">
+     <p>Select one of the following operations</p>
+     <x-box class="operations">
+       <div class="mosaic" onclick="page('mosaic.html')">
+        <span class="icon "><i class="fa fa-camera" aria-hidden="true"></i></span>
+        <p>Mosaicking</p>
+       </div>
+       <div class="dehaze" onclick="page('dehaze.html')">
+        <span class="icon"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>
+        <p>Dehazing</p>
+       </div>
+       <div class="enhace"  onclick="page('enhance.html')">
+        <span class="icon"><i class="fa fa-sun-o" aria-hidden="true"></i></span>
+        <p>Enhancement</p>
+       </div>
+       <div class="segment"  onclick="page('segment.html')">
+        <span class="icon"><i class="fa fa-paint-brush" aria-hidden="true"></i></span>
+        <p>Segmentation</p>
+       </div>
+     </x-box>
+     <div class="footer">
+     <p>Solinas Technologies Pvt. Ltd.</p>
+     <x-button toggled class="about" >
+      <x-box>
+        <span><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+        <x-label>About</x-label>
+      </x-box>
+    </x-button>
+    </div>
+     </div>
+      
     </div>
   </body>
 </html>

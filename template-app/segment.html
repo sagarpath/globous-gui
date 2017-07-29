@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Apokalypto 1.0</title>
+
+    <!-- Stylesheets -->
+    <!-- <link rel="stylesheet" href="./css/photon.min.css"> -->
+
+    <!-- Javascript -->
+    <!-- <script src="js/menu.js" charset="utf-8"></script> -->
+    <script src="segment.js" type="text/javascript" charset="utf-8" async defer></script>
+    <script src="page.js" ></script>
+    <link rel="import" href="node_modules/xel/xel.min.html">
+    <link rel="stylesheet" href="node_modules/xel/stylesheets/material.theme.css">
+    <!-- <link rel="stylesheet" href="node_modules/xel/stylesheets/macos.theme.css"> -->
+    
+    <link rel="stylesheet" type="text/css" href="fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styling.css">
+    <link rel="stylesheet" type="text/css" href="./css/segment.css">
+  </head>
+  <body>
+    <div class="window" align="center">
+      
+      <div class="header" align="center">
+       <img src="logo/1primarylogo.png" alt="">
+     </div>
+      <div class="options">
+        <div class="top">
+          <p>Segmentation</p>
+          <x-button toggled class="about" onclick="page('index.html')">
+            <x-box>
+              <span><i class="fa fa-home" aria-hidden="true"></i></span>
+              <x-label>Home</x-label>
+            </x-box>
+          </x-button>
+        </div>
+        <div class="operations">
+            
+            <div class="func">
+              <label>Input Image File : <input type="file" accept="video/*" name="file"></label>
+            
+            <x-numberinput min="0" step="1" required>
+                <x-label>No. of classes</x-label>
+                <x-stepper disabled="decrement"></x-stepper>
+            </x-numberinput>
+            <x-progressbar value="0.5"></x-progressbar>
+            
+            <x-button class="button" toggled onclick="execute()">
+              <x-box>
+                <!-- <span><x-throbber></x-throbber></span> -->
+                <x-label>Start Segmentation</x-label>
+              </x-box>
+                
+            </x-button>
+            </div>
+        </div>
+      </div>
+
+  </body>
+  <script>
+  let bar = document.querySelector("x-progressbar");
+  // let callback = () => bar.value >= 1 ? bar.value = 0 : bar.value += 0.15;
+  // setInterval(callback, 1000);
+</script>
+</html>

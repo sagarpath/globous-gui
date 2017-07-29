@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Apokalypto 1.0</title>
+
+    <!-- Stylesheets -->
+    <!-- <link rel="stylesheet" href="./css/photon.min.css"> -->
+
+    <!-- Javascript -->
+    <!-- <script src="js/menu.js" charset="utf-8"></script> -->
+    <script src="page.js" ></script>
+    <script src="enhance.js" type="text/javascript" charset="utf-8" async defer></script>
+    
+    <link rel="import" href="node_modules/xel/xel.min.html">
+    <link rel="stylesheet" href="node_modules/xel/stylesheets/material.theme.css">
+    <!-- <link rel="stylesheet" href="node_modules/xel/stylesheets/macos.theme.css"> -->
+    <link rel="stylesheet" type="text/css" href="fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styling.css">
+    <link rel="stylesheet" type="text/css" href="./css/enhance.css">
+  </head>
+  <body>
+
+    <div class="window" align="center">
+      
+      <div class="header" align="center">
+       <img src="logo/1primarylogo.png" alt="">
+     </div>
+      <div class="options">
+        <div class="top">
+          <p>Enhancement</p>
+          <x-button toggled class="about" onclick="page('index.html')">
+            <x-box>
+              <span><i class="fa fa-home" aria-hidden="true"></i></span>
+              <x-label>Home</x-label>
+            </x-box>
+          </x-button>
+        </div>
+
+        <div class="operations">
+            <x-radios class="type">
+              <x-box onclick="category('gamma')">
+                <x-radio id="first-radio" toggled></x-radio>
+                <x-label for="first-radio" id="label-1">Gamma Correction</x-label>
+              </x-box>
+              <x-box  onclick="category('clahe')">
+                <x-radio id="second-radio" ></x-radio>
+                <x-label for="second-radio" id="label-2">CLAHE</x-label>
+              </x-box>
+              </x-box>
+            </x-radios>
+            <div class="func">    
+            <label>Input Video File : <input id="clvid" type="file" accept="video/*" name="file"></label><br>
+            <div id="gamma">
+              <x-numberinput min="0" max="16"  step="0.1" required>
+                <x-label>Input Gamma Value</x-label>
+                <x-stepper disabled="decrement"></x-stepper>
+              </x-numberinput>
+            </div>
+            <div id="clahe" style="display: none;">
+              <x-numberinput min="0" max="16"  step="0.1" required id="clipv">
+                <x-label>Input Clip Size</x-label>
+                <x-stepper disabled="decrement" ></x-stepper>
+              </x-numberinput>
+            </div>
+
+            <x-progressbar value="0.0"></x-progressbar>
+            
+            <x-button class="button" toggled onclick="execute()">
+              <x-box>
+                <!-- <span><x-throbber></x-throbber></span> -->
+                <x-label>Start Enhancement</x-label>
+              </x-box>
+                
+            </x-button>
+            </div>
+        </div>
+      </div>
+
+  </div>
+
+
+
+  </body>
+</html>

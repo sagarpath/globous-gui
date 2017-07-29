@@ -17,7 +17,7 @@ def main():
         if ret:
             i = i + 1
             print i
-            sys.stdout.flush()
+            # sys.stdout.flush()
             if i == 30:
                 break
             # cv2.imshow('frame', frame)

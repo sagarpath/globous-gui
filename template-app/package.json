@@ -8,9 +8,12 @@
     "start": "electron main.js"
   },
   "dependencies": {
-    "zerorpc": "fyears/zerorpc-node"
+    "jQuery": "^1.7.4",
+    "python-shell": "^0.4.0",
+    "xel": "0.0.48"
   },
   "devDependencies": {
+    "devtron": "^1.4.0",
     "electron": "^1.6.11",
     "electron-reload": "^1.2.1"
   }
